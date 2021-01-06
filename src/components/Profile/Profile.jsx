@@ -1,19 +1,18 @@
 import React from 'react';
 import clasess from './Profile.module.css';
-import MyPosts from './MyPosts/MyPosts';
+import MyPostsContainer from './MyPosts/MyPostsContainer';
+import ProfileInfo from './Profileinfo/ProfileInfo';
 
-const Profile = () => {
-    return <div className={clasess.content}>
-        <div>
-            <img src='https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg'></img>
-        </div>
-        <div>
-            ava + discriptions
-        </div>
+const Profile = (props) => {
 
-        <MyPosts />
-    </div>
-    
+    return (
+        <div className={clasess.content}>
+            <ProfileInfo />
+            <MyPostsContainer 
+            store={props.store}
+            />
+        </div>
+    )
 }
 
 export default Profile;

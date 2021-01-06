@@ -9,3 +9,11 @@
     border-radius: 45px;
 }
 
+.item{
+  margin-top: 10px;
+}
+
+.message{
+  right: 20px;
+  display: inline;
+}
